@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "773435849487",
+    "project_id": "employee-management-aac90",
+    "storage_bucket": "employee-management-aac90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773435849487:android:21a7babf2d4c19e4451c7a",
+        "android_client_info": {
+          "package_name": "com.example.employee_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeRiMpgoC70EbLt5wvjlPHnMfLofZG7sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
