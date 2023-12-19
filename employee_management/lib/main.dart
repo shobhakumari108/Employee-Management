@@ -1,13 +1,14 @@
-
+import 'package:employee_management/Screens/Mark_Attendance_screen.dart';
 import 'package:employee_management/Screens/home.dart';
 import 'package:employee_management/auth/login.dart';
-import 'package:employee_management/auth/login_screen.dart';
+
 import 'package:employee_management/auth/otp_screen.dart';
+import 'package:employee_management/auth/phone_screen.dart';
 import 'package:employee_management/auth/signup.dart';
 import 'package:employee_management/firebase_options.dart';
+import 'package:employee_management/models/add_employee_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -24,12 +25,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home:LoginScreen(),
+      home:LoginScreen(),
       // home: SignUpPage(),
       // home:UserLoginScreen(),
-      home:MyHomePage(),
+      // home:MyHomePage(),
+      // home: MarkAttendanceScreen(
+        // employee: Employee(),
+      // ),
       // home:OTPScreen(verificationId: '', registeredMobileNumber: '',),
-  
+
 // http://localhost:2000/app/users/addUser
     );
   }

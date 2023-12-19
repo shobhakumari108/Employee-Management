@@ -1,32 +1,33 @@
 class Employee {
   String? sId;
-  String? firstName;
-  String? lastName;
-  String? email;
-  String? phoneNumber;
-  String? profilePicture;
+  String? FirstName; // Update field name
+  String? LastName;  // Update field name
+  String? Email;     // Update field name
+  String? PhoneNumber;  // Update field name
+  String? ProfilePicture;  // Update field name
   String? jobType;
   String? joiningDate;
   String? companyName;
 
-  Employee(
-      {this.sId,
-      this.firstName,
-      this.lastName,
-      this.email,
-      this.phoneNumber,
-      this.profilePicture,
-      this.jobType,
-      this.joiningDate,
-      this.companyName});
+  Employee({
+    this.sId,
+    this.FirstName,
+    this.LastName,
+    this.Email,
+    this.PhoneNumber,
+    this.ProfilePicture,
+    this.jobType,
+    this.joiningDate,
+    this.companyName,
+  });
 
   Employee.fromJson(Map<String, dynamic> json) {
     sId = json['_id'];
-    firstName = json['FirstName'];
-    lastName = json['LastName'];
-    email = json['Email'];
-    phoneNumber = json['PhoneNumber'];
-    profilePicture = json['ProfilePicture'];
+    FirstName = json['FirstName'];
+    LastName = json['LastName'];
+    Email = json['Email'];
+    PhoneNumber = json['PhoneNumber'];
+    ProfilePicture = json['ProfilePicture'];
     jobType = json['jobType'];
     joiningDate = json['joiningDate'];
     companyName = json['companyName'];
@@ -35,11 +36,11 @@ class Employee {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['_id'] = sId;
-    data['FirstName'] = firstName;
-    data['LastName'] = lastName;
-    data['Email'] = email;
-    data['PhoneNumber'] = phoneNumber;
-    data['ProfilePicture'] = profilePicture;
+    data['FirstName'] = FirstName;
+    data['LastName'] = LastName;
+    data['Email'] = Email;
+    data['PhoneNumber'] = PhoneNumber;
+    data['ProfilePicture'] = ProfilePicture;
     data['jobType'] = jobType;
     data['joiningDate'] = joiningDate;
     data['companyName'] = companyName;

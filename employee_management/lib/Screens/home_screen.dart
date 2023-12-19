@@ -1,4 +1,5 @@
 import 'package:employee_management/Screens/Employee_screen.dart';
+import 'package:employee_management/Screens/at_employee_list_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -124,40 +125,51 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    Material(
-                      borderRadius: BorderRadius.circular(30),
-                      elevation: 5,
-                      child: Container(
-                        width: 120,
-                        height: 120,
-                        decoration: BoxDecoration(
-                          // color: Colors.cyan,
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            CircleAvatar(
-                                backgroundColor:
-                                    Color.fromARGB(100, 240, 202, 89),
-                                radius: 20,
-                                child: Icon(
-                                  Icons.person_search,
-                                  color: Color.fromARGB(255, 121, 91, 3),
-                                )),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Mark',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Attendance",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
+                    GestureDetector(
+                        onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AtEmployeeScreen(),
+                          ),
+                        );
+                      },
+
+                      child: Material(
+                        borderRadius: BorderRadius.circular(30),
+                        elevation: 5,
+                        child: Container(
+                          width: 120,
+                          height: 120,
+                          decoration: BoxDecoration(
+                            // color: Colors.cyan,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                  backgroundColor:
+                                      Color.fromARGB(100, 240, 202, 89),
+                                  radius: 20,
+                                  child: Icon(
+                                    Icons.person_search,
+                                    color: Color.fromARGB(255, 121, 91, 3),
+                                  )),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'Mark',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Attendance",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),

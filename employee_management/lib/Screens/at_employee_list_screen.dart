@@ -1,3 +1,4 @@
+import 'package:employee_management/Screens/Mark_Attendance_screen.dart';
 import 'package:employee_management/Screens/add_employee.dart';
 import 'package:employee_management/Screens/employee_profile_screen.dart';
 import 'package:employee_management/Screens/home.dart';
@@ -5,14 +6,14 @@ import 'package:employee_management/models/add_employee_model.dart';
 import 'package:employee_management/service/add_employee_service.dart';
 import 'package:flutter/material.dart';
 
-class EmployeeScreen extends StatefulWidget {
-  const EmployeeScreen({Key? key}) : super(key: key);
+class AtEmployeeScreen extends StatefulWidget {
+  const AtEmployeeScreen({Key? key}) : super(key: key);
 
   @override
-  State<EmployeeScreen> createState() => _EmployeeScreenState();
+  State<AtEmployeeScreen> createState() => _AtEmployeeScreenState();
 }
 
-class _EmployeeScreenState extends State<EmployeeScreen> {
+class _AtEmployeeScreenState extends State<AtEmployeeScreen> {
   TextEditingController _searchController = TextEditingController();
   List<Employee> _employees = [];
   List<Employee> _filteredEmployees = [];
@@ -124,7 +125,7 @@ class _EmployeeScreenState extends State<EmployeeScreen> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                EmployeeProfileScreen(employee: employee),
+                                MarkAttendanceScreen(employee: employee),
                           ),
                         );
                       },
@@ -150,20 +151,20 @@ class _EmployeeScreenState extends State<EmployeeScreen> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 121, 91, 3),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => AddEmployeeScreen()),
-          );
-        },
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: Color.fromARGB(255, 121, 91, 3),
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(builder: (context) => AddEmployeeScreen()),
+      //     );
+      //   },
+      //   child: Icon(
+      //     Icons.add,
+      //     color: Colors.white,
+      //   ),
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
