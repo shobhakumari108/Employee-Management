@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:employee_management/Screens/Employee_screen.dart';
 import 'package:employee_management/Screens/edit_employee_profile.dart';
@@ -43,20 +45,20 @@ class EmployeeProfileScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Confirm Delete'),
-          content: Text('Are you sure you want to delete this profile?'),
+          title:const Text('Confirm Delete'),
+          content:const Text('Are you sure you want to delete this profile?'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             TextButton(
               onPressed: () {
                 _deleteProfile(context);
               },
-              child: Text('Delete'),
+              child:const Text('Delete'),
             ),
           ],
         );
@@ -67,14 +69,14 @@ class EmployeeProfileScreen extends StatelessWidget {
   Widget _buildProfileCard(String title, String value) {
     return Card(
       elevation: 4,
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin:const EdgeInsets.symmetric(vertical: 8),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
       child: ListTile(
         title: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
             // color: Colors.blue,
@@ -82,7 +84,7 @@ class EmployeeProfileScreen extends StatelessWidget {
         ),
         subtitle: Text(
           value,
-          style: TextStyle(
+          style:const TextStyle(
             fontSize: 14,
             color: Colors.black87,
           ),
@@ -97,7 +99,7 @@ class EmployeeProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Employee Profile'),
         leading: IconButton(
-          icon: Icon(
+          icon:const Icon(
             Icons.arrow_back,
           ),
           onPressed: () {
@@ -112,7 +114,7 @@ class EmployeeProfileScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: CircleAvatar(
+            icon:const CircleAvatar(
               // backgroundColor: const Color.fromARGB(100, 240, 202, 89),
               child: Icon(
                 Icons.edit,
@@ -129,7 +131,7 @@ class EmployeeProfileScreen extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: CircleAvatar(
+            icon: const CircleAvatar(
               // backgroundColor:const Color.fromARGB(100, 240, 202, 89) ,
               child: Icon(
                 Icons.delete,
@@ -152,7 +154,7 @@ class EmployeeProfileScreen extends StatelessWidget {
                 backgroundImage: NetworkImage(employee.ProfilePicture ?? ''),
               ),
             ),
-            SizedBox(height: 20),
+           const SizedBox(height: 20),
             _buildProfileCard(
               'Name',
               '${employee.FirstName} ${employee.LastName}',

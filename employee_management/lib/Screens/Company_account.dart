@@ -19,19 +19,19 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
         padding: const EdgeInsets.all(25.0),
         child: SingleChildScrollView(
           child: Column(children: [
-            SizedBox(height: 28),
-            Text(
+             const SizedBox(height: 28),
+           const Text(
               "Employee Management System",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 80),
+           const SizedBox(height: 80),
             Material(
               elevation: 5,
               child: Container(
                 width: size.width,
                 height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -56,14 +56,14 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+          const  SizedBox(height: 20),
             Material(
               elevation: 5,
               child: Container(
                 width: size.width,
                 height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -88,14 +88,14 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+           const SizedBox(height: 20),
             Material(
               elevation: 5,
               child: Container(
                 width: size.width,
                 height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child:const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -120,14 +120,14 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+         const   SizedBox(height: 20),
             Material(
               elevation: 5,
               child: Container(
                 width: size.width,
                 height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child:const Padding(
+                  padding:  EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -152,7 +152,7 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 180),
+          const  SizedBox(height: 180),
             SizedBox(
                 width: size.width,
                 height: 50,
@@ -166,7 +166,7 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
                   style: ElevatedButton.styleFrom(
                     primary: const Color.fromARGB(255, 121, 91, 3),
                   ),
-                  child: Text(
+                  child:const Text(
                     'Create Company Account',
                     style: TextStyle(
                       fontSize: 20,
@@ -175,10 +175,10 @@ class _CompanyAccountScreenState extends State<CompanyAccountScreen> {
                     ),
                   ),
                 )),
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
-            Text(
+          const  Text(
               'Join Existing Company',
               style: TextStyle(
                 fontSize: 20,

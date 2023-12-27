@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:employee_management/widgets/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -28,7 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 60),
+              const  SizedBox(height: 60),
                 Center(
                   child: SizedBox(
                     height: 120,
@@ -36,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: Material(
                       borderRadius: BorderRadius.circular(60),
                       elevation: 10,
-                      child: Icon(
+                      child:const Icon(
                         Icons.person,
                         size: 50, // Adjust the icon size as needed
                         color: Color.fromARGB(
@@ -45,38 +47,38 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 60),
+               const SizedBox(height: 60),
                 buildTextFieldWithIcon(
                   controller: _companyNameController,
                   hintText: 'Company Name',
                   icon: Icons.business,
                 ),
-                SizedBox(height: 20),
+              const  SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _employerNameController,
                   hintText: 'Employer Name',
                   icon: Icons.person,
                 ),
-                SizedBox(height: 20),
+              const  SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _mobileNumberController,
                   hintText: 'Mobile Number',
                   icon: Icons.phone,
                   keyboardType: TextInputType.phone,
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _employeeIdController,
                   hintText: 'Employee ID',
                   icon: Icons.format_list_numbered,
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _countryController,
                   hintText: 'Country',
                   icon: Icons.location_on,
                 ),
-                SizedBox(height: 60),
+               const SizedBox(height: 60),
                 SizedBox(
                     width: size.width,
                     height: 50,
@@ -90,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromARGB(255, 121, 91, 3),
                       ),
-                      child: Text(
+                      child:const Text(
                         'Continue',
                         style: TextStyle(
                           fontSize: 20,

@@ -53,7 +53,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   icon: Icons.person_add,
                 ),
                 SizedBox(height: 20),
-                buildTextFieldWithIcon(
+                buildTextFiel
                   controller: _controllerLastName,
                   hintText: 'Last Name',
                   icon: Icons.person,

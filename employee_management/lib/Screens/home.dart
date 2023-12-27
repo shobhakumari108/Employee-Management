@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:employee_management/Screens/SettingsScreen.dart';
 import 'package:employee_management/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _currentIndex = index;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
@@ -83,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
 class SalaryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Salary Screen'),
     );
   }
@@ -92,7 +94,7 @@ class SalaryScreen extends StatelessWidget {
 class SupportScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Support Screen'),
     );
   }

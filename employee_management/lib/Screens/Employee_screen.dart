@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_final_fields
+
 import 'package:employee_management/Screens/add_employee.dart';
 import 'package:employee_management/Screens/employee_profile_screen.dart';
 import 'package:employee_management/Screens/home.dart';

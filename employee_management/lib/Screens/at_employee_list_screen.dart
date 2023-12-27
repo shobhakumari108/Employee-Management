@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:employee_management/Screens/Mark_Attendance_screen.dart';
 import 'package:employee_management/Screens/add_employee.dart';
 import 'package:employee_management/Screens/employee_profile_screen.dart';
@@ -99,10 +101,10 @@ class _AtEmployeeScreenState extends State<AtEmployeeScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Column(
               children: [
-                SizedBox(
+               const SizedBox(
                   height: 10,
                 ),
-                Container(
+             Container(
                   width: size.width,
                   child: TextField(
                     controller: _searchController,

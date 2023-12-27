@@ -1,10 +1,11 @@
 import 'dart:io';
+import 'package:employee_management/service/add_employee_service.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:employee_management/models/add_employee_model.dart';
-import 'package:employee_management/service/add_employee_service.dart';
+// import 'package:employee_management/service/employee_service.dart';
 import 'employee_screen.dart';
 
 class AddEmployeeScreen extends StatefulWidget {
@@ -102,11 +103,10 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    // Provide options to pick from camera or gallery
                     showModalBottomSheet(
                       context: context,
                       builder: (context) {
-                        return Column(
+                        return  Column(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             ListTile(
@@ -136,16 +136,15 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(60),
-                      image: _selectedPhoto != null &&
-                              _selectedPhoto!.isNotEmpty
-                          ? DecorationImage(
-                              image: FileImage(File(_selectedPhoto!)),
-                              fit: BoxFit.cover,
-                            )
-                          : null,
+                      image:
+                          _selectedPhoto != null && _selectedPhoto!.isNotEmpty
+                              ? DecorationImage(
+                                  image: FileImage(File(_selectedPhoto!)),
+                                  fit: BoxFit.cover,
+                                )
+                              : null,
                     ),
-                    child: _selectedPhoto == null ||
-                            _selectedPhoto!.isEmpty
+                    child: _selectedPhoto == null || _selectedPhoto!.isEmpty
                         ? Center(
                             child: Icon(
                               Icons.add_a_photo,
@@ -156,43 +155,44 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                         : null,
                   ),
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _companyNameController,
                   hintText: 'Company name',
                   icon: Icons.work,
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _firstNameController,
                   hintText: 'Enter first name',
                   icon: Icons.person,
                 ),
-                SizedBox(height: 20),
+              const  SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _lastNameController,
                   hintText: 'Enter last name',
                   icon: Icons.person,
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _emailController,
                   hintText: 'Enter email',
                   icon: Icons.email,
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _phoneController,
                   hintText: 'Enter phone number',
                   icon: Icons.phone,
+                  
                 ),
-                SizedBox(height: 20),
+               const SizedBox(height: 20),
                 buildTextFieldWithIcon(
                   controller: _jobTypeController,
                   hintText: 'Enter job type',
                   icon: Icons.work,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
                   height: 50,
                   child: Row(
@@ -203,7 +203,7 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                           decoration: InputDecoration(
                             hintText: 'Joining Date',
                             prefixIcon: IconButton(
-                              icon: Icon(Icons.date_range),
+                              icon: const Icon(Icons.date_range),
                               onPressed: _selectDate,
                             ),
                             border: OutlineInputBorder(),
@@ -213,12 +213,32 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                 const SizedBox(height: 20),
                 SizedBox(
                   width: size.width,
                   height: 50,
                   child: ElevatedButton(
                     onPressed: () async {
+                      // Validate phone number
+                      // Validate phone number
+                      if (_phoneController.text.isNotEmpty &&
+                          !RegExp(r'^[0-9]{10}$')
+                              .hasMatch(_phoneController.text)) {
+                        Fluttertoast.showToast(msg: 'Invalid phone number');
+                        return;
+                      }
+
+                      // Validate email
+                      if (_emailController.text.isNotEmpty &&
+                          !RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$')
+                              .hasMatch(_emailController.text)) {
+                        Fluttertoast.showToast(msg: 'Invalid email format');
+                        return;
+                      }
+
+                      // Convert date to ISO 8601 format
+                      String joiningDate = _selectedDate.toIso8601String();
+
                       final employee = Employee(
                         FirstName: _firstNameController.text,
                         LastName: _lastNameController.text,
@@ -226,8 +246,8 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                         PhoneNumber: _phoneController.text,
                         jobType: _jobTypeController.text,
                         companyName: _companyNameController.text,
-                        joiningDate: _selectedDate.toIso8601String(),
-                        ProfilePicture: _selectedPhoto ?? "",
+                        joiningDate: joiningDate,
+                        ProfilePicture: _selectedPhoto ?? '',
                       );
 
                       print("User Data: ${employee.toJson()}");
@@ -253,14 +273,13 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                         );
                       } else {
                         // Handle the case where adding the employee fails
-                        Fluttertoast.showToast(
-                            msg: 'Failed to add employee');
+                        Fluttertoast.showToast(msg: 'Failed to add employee');
                       }
                     },
                     style: ElevatedButton.styleFrom(
                       primary: const Color.fromARGB(255, 121, 91, 3),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Continue',
                       style: TextStyle(
                         fontSize: 20,

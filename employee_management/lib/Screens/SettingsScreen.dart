@@ -36,7 +36,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               decoration: BoxDecoration(
                                   border: Border.all(color: Colors.black),
                                   borderRadius: BorderRadius.circular(25)),
-                              child: Center(
+                              child:const Center(
                                 child: Text(
                                   "ADD LOGO",
                                   style: TextStyle(
@@ -44,10 +44,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                           const SizedBox(
                               width: 20,
                             ),
-                            Column(
+                           const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -59,7 +59,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ],
                         ),
-                        Row(
+                      const  Row(
                           children: [
                             // Icon(Icons.edit),
                             Text(
@@ -72,14 +72,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 20,
                 ),
-                Text(
+              const  Text(
                   "Suggested features",
                   style: TextStyle(fontSize: 20),
                 ),
-                SizedBox(
+              const  SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -89,7 +89,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Container(
                         height: 120,
                         width: 100,
-                        child: Column(
+                        child:const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CircleAvatar(
@@ -102,7 +102,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                   const SizedBox(
                       width: 20,
                     ),
                     Material(
@@ -110,7 +110,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Container(
                         height: 120,
                         width: 100,
-                        child: Column(
+                        child:const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CircleAvatar(
@@ -126,7 +126,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -146,7 +146,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               decoration: BoxDecoration(
                                   border: Border.all(color: Colors.black),
                                   borderRadius: BorderRadius.circular(25)),
-                              child: Center(
+                              child:const Center(
                                 child: Text(
                                   "ADD LOGO",
                                   style: TextStyle(
@@ -154,10 +154,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                           const SizedBox(
                               width: 20,
                             ),
-                            Column(
+                           const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -169,10 +169,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                       const SizedBox(
                           height: 20,
                         ),
-                        Row(
+                       const Row(
                           children: [
                             // Icon(Icons.edit),
                             Text(
@@ -185,7 +185,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -205,7 +205,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               decoration: BoxDecoration(
                                   border: Border.all(color: Colors.black),
                                   borderRadius: BorderRadius.circular(25)),
-                              child: Center(
+                              child:const Center(
                                 child: Text(
                                   "ADD LOGO",
                                   style: TextStyle(
@@ -213,10 +213,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                           const SizedBox(
                               width: 20,
                             ),
-                            Column(
+                           const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -228,7 +228,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ],
                         ),
-                        Row(
+                       const Row(
                           children: [
                             // Icon(Icons.edit),
                             Text(
@@ -241,7 +241,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+              const  SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -261,7 +261,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               decoration: BoxDecoration(
                                   border: Border.all(color: Colors.black),
                                   borderRadius: BorderRadius.circular(25)),
-                              child: Center(
+                              child:const Center(
                                 child: Text(
                                   "ADD LOGO",
                                   style: TextStyle(
@@ -269,10 +269,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                          const  SizedBox(
                               width: 20,
                             ),
-                            Column(
+                           const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -284,7 +284,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ],
                         ),
-                        Row(
+                      const  Row(
                           children: [
                             // Icon(Icons.edit),
                             Text(
@@ -297,7 +297,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+              const  SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -317,7 +317,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               decoration: BoxDecoration(
                                   border: Border.all(color: Colors.black),
                                   borderRadius: BorderRadius.circular(25)),
-                              child: Center(
+                              child:const Center(
                                 child: Text(
                                   "ADD LOGO",
                                   style: TextStyle(
@@ -325,10 +325,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                          const  SizedBox(
                               width: 20,
                             ),
-                            Column(
+                          const  Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -340,7 +340,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ],
                         ),
-                        Row(
+                      const  Row(
                           children: [
                             // Icon(Icons.edit),
                             Text(

@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:employee_management/Screens/Employee_screen.dart';
 import 'package:employee_management/Screens/at_employee_list_screen.dart';
+import 'package:employee_management/Screens/attendance_history_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,13 +18,13 @@ class _HomeScreenState extends State<HomeScreen> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Employee management System'),
+        title:const Text('Employee management System'),
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
+           const DrawerHeader(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 121, 91, 3),
               ),
@@ -51,22 +54,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.lock),
-              title: Text('App Lock'),
+              leading:const Icon(Icons.lock),
+              title: const Text('App Lock'),
               onTap: () {
                 // Handle the app lock action
               },
             ),
             ListTile(
-              leading: Icon(Icons.star),
-              title: Text('Rate the App'),
+              leading:const Icon(Icons.star),
+              title:const Text('Rate the App'),
               onTap: () {
                 // Handle the rating action
               },
             ),
             ListTile(
-              leading: Icon(Icons.share),
-              title: Text('Share with Friends'),
+              leading:const Icon(Icons.share),
+              title:const Text('Share with Friends'),
               onTap: () {
                 // Handle the sharing action
               },
@@ -101,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           decoration: BoxDecoration(
                               // color: Colors.cyan,
                               borderRadius: BorderRadius.circular(30)),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -126,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     GestureDetector(
-                        onTap: () {
+                      onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -134,7 +137,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         );
                       },
-
                       child: Material(
                         borderRadius: BorderRadius.circular(30),
                         elevation: 5,
@@ -145,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             // color: Colors.cyan,
                             borderRadius: BorderRadius.circular(30),
                           ),
-                          child: Column(
+                          child:const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -174,6 +176,36 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AttendanceHistoryList(),
+                      ),
+                    );
+                  },
+                  child: Material(
+                      borderRadius: BorderRadius.circular(20),
+                      elevation: 5,
+                      // width:size.width,
+                      child: Container(
+                        height: 60,
+                        width: size.width,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Center(
+                          child: Text(
+                            "Attendance Report",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      )),
                 )
               ],
             ),
